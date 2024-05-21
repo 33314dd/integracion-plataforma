@@ -1,0 +1,325 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retrogameshop_MRT</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+</head>
+<body>
+
+    <header class="header">
+        <div class="menu container">
+            <a href="#" class="logo">logo</a>
+            <input type="checkbox" id="menu">
+            <label for="menu">
+                <img src="{% static 'images/menu.png' %}" class="menu-icono" alt="Menu">
+            </label>
+            
+            <nav class="navbar">
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Servicios</a></li>
+                    <li><a href="#">Contactos</a></li>
+                    <li><a href="{% url 'ingresar' %}">Ingresar</a></li>
+                </ul>
+            </nav>
+
+            <div>
+                <ul>
+                    <li class="submenu">
+                        <img id="img-carrito" src="{% static 'images/car.svg' %}" alt="Car">
+                       
+                        <div id="carrito">
+                            <table id="lista-carrito">
+                                <thead>
+                                    <tr>
+                                        <th>Imagen</th>
+                                        <th>Nombre</th>
+                                        <th>Precio</th>
+                                    </tr>
+                                </thead>
+                                <tbody></tbody>
+                            </table>
+                            <a href="#" id="vaciar-carrito" class="btn-3">Vaciar Carrito</a>
+                            <a href="{% url 'checkout' %}" id="pagar" class="btn-3">Pagar</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="header-content container">
+            <div class="header-txt">
+                <span>Bienvenido a Retrogameshop_MRT</span>
+                <h1>Ofertas Especiales</h1>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Nostrum non quasi tempora, illum ut modi beatae corrupti, 
+                    quos sed nulla et aspernatur libero consectetur 
+                    atque minima vero hic repellat quo?
+                </p>
+                <div class="buttons">
+                    <a href="#" class="btn-1">Informacion</a>
+                    <a href="#" class="btn-1">Leer mas</a>
+                </div>
+            </div>
+            <div class="header-img">
+                <img src="{% static 'images/bag.jpeg' %}" alt="Bag">
+            </div>
+        </div>
+    </header>
+
+    <section class="oferts container">
+        <div class="ofert-1 b1">
+            <div class="ofert-txt">
+                <h3>Lorem impsum sit amet</h3>
+                <a href="#">Leer mas</a>
+            </div>
+            <div class="ofert-img">
+                <img src="{% static 'images/s1.jpeg' %}" alt="">
+            </div>
+        </div>
+
+        <div class="ofert-1 b2">
+            <div class="ofert-txt">
+                <h3>Lorem impsum sit amet</h3>
+                <a href="#">Leer mas</a>
+            </div>
+            <div class="ofert-img">
+                <img src="{% static 'images/s2.jpeg' %}" alt="">
+            </div>
+        </div>
+
+        <div class="ofert-1 b3">
+            <div class="ofert-txt">
+                <h3>Lorem impsum sit amet</h3>
+                <a href="#">Leer mas</a>
+            </div>
+            <div class="ofert-img">
+                <img src="{% static 'images/s3.jpeg' %}" alt="">
+            </div>
+        </div>
+    </section>
+
+    <main class="products container">
+        <h2>Productos</h2>
+
+        <div class="box-container" id="lista-1">
+            <div class="box">
+                <img src="{% static 'images/pr1.jpeg' %}" alt="">
+                <div class="product-txt">
+                    <h3>Elisyum</h3>
+                    <p>Calidad premium</p>
+                    <p class="precio">$5656</p>
+                    <a href="#" class="agregar-carrito btn-3" data-id="1">Agregar al carrito</a>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="{% static 'images/pr2.jpeg' %}" alt="">
+                <div class="product-txt">
+                    <h3>Elisyum</h3>
+                    <p>Calidad premium</p>
+                    <p class="precio">$5656</p>
+                    <a href="#" class="agregar-carrito btn-3" data-id="2">Agregar al carrito</a>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="{% static 'images/pr3.jpeg' %}" alt="">
+                <div class="product-txt">
+                    <h3>Elisyum</h3>
+                    <p>Calidad premium</p>
+                    <p class="precio">$5656</p>
+                    <a href="#" class="agregar-carrito btn-3" data-id="3">Agregar al carrito</a>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="{% static 'images/pr4.jpeg' %}" alt="">
+                <div class="product-txt">
+                    <h3>Elisyum</h3>
+                    <p>Calidad premium</p>
+                    <p class="precio">$3434</p>
+                    <a href="#" class="agregar-carrito btn-3" data-id="4">Agregar al carrito</a>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="{% static 'images/pr5.jpeg' %}" alt="">
+                <div class="product-txt">
+                    <h3>Elisyum</h3>
+                    <p>Calidad premium</p>
+                    <p class="precio">$23232</p>
+                    <a href="#" class="agregar-carrito btn-3" data-id="5">Agregar al carrito</a>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="{% static 'images/pr6.jpeg' %}" alt="">
+                <div class="product-txt">
+                    <h3>Elisyum</h3>
+                    <p>Calidad premium</p>
+                    <p class="precio">$4232</p>
+                    <a href="#" class="agregar-carrito btn-3" data-id="6">Agregar al carrito</a>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="{% static 'images/pr7.jpeg' %}" alt="">
+                <div class="product-txt">
+                    <h3>Elisyum</h3>
+                    <p>Calidad premium</p>
+                    <p class="precio">$2323</p>
+                    <a href="#" class="agregar-carrito btn-3" data-id="7">Agregar al carrito</a>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="{% static 'images/pr8.jpeg' %}" alt="">
+                <div class="product-txt">
+                    <h3>Elisyum</h3>
+                    <p>Calidad premium</p>
+                    <p class="precio">$23430</p>
+                    <a href="#" class="agregar-carrito btn-3" data-id="8">Agregar al carrito</a>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="{% static 'images/pr9.jpeg' %}" alt="">
+                <div class="product-txt">
+                    <h3>Elisyum</h3>
+                    <p>Calidad premium</p>
+                    <p class="precio">$2324</p>
+                    <a href="#" class="agregar-carrito btn-3" data-id="9">Agregar al carrito</a>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="{% static 'images/pr11.jpeg' %}" alt="">
+                <div class="product-txt">
+                    <h3>Elisyum</h3>
+                    <p>Calidad premium</p>
+                    <p class="precio">$43434</p>
+                    <a href="#" class="agregar-carrito btn-3" data-id="10">Agregar al carrito</a>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="{% static 'images/pr12.jpeg' %}" alt="">
+                <div class="product-txt">
+                    <h3>Elisyum</h3>
+                    <p>Calidad premium</p>
+                    <p class="precio">$43443</p>
+                    <a href="#" class="agregar-carrito btn-3" data-id="11">Agregar al carrito</a>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="{% static 'images/pr13.jpeg' %}" alt="">
+                <div class="product-txt">
+                    <h3>Elisyum</h3>
+                    <p>Calidad premium</p>
+                    <p class="precio">$3434</p>
+                    <a href="#" class="agregar-carrito btn-3" data-id="12">Agregar al carrito</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="btn-2" id="load-more">Cargar mas</div>
+    </main>
+
+    <section class="testimonial container">
+        <span>Testimoniales</span>
+        <h2>Que opinan nuestros clientes</h2>
+        <div class="testimonial-content">
+            <div class="testimonial-1">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Velit culpa nobis labore incidunt. Ducimus,hic rerum provident 
+                    quas laboriosam enim, accusantium, quibusdam quos doloremque 
+                    pariatur facere repellendus. Maxime, adipisci voluptas!
+                </p>
+                <img src="{% static 'images/starts.png' %}" alt="">
+                <h4>Lorem impsum</h4>
+            </div>
+
+            <div class="testimonial-1">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Velit culpa nobis labore incidunt. Ducimus,hic rerum provident 
+                    quas laboriosam enim, accusantium, quibusdam quos doloremque 
+                    pariatur facere repellendus. Maxime, adipisci voluptas!
+                </p>
+                <img src="{% static 'images/starts.png' %}" alt="">
+                <h4>Lorem impsum</h4>
+            </div>
+        </div>
+    </section>
+    <div class="testimonial container">
+        <h3>El clima en {{ city }}</h3>
+        {% if error %}
+            <p>{{ error }}</p>
+        {% else %}
+            <p>Temperatura: {{ temperature }} °C</p>
+            <p>Description: {{ description }}</p>
+            {% if icon %}
+                <img src="http://openweathermap.org/img/wn/{{ icon }}@2x.png" alt="Weather icon">
+            {% endif %}
+        {% endif %}
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content container">
+            <div class="link">
+                <h3>Saber más..</h3>
+                <ul>
+                    <li><a href="#">Lorem</a></li>
+                    <li><a href="#">Lorem</a></li>
+                    <li><a href="#">Lorem</a></li>
+                    <li><a href="#">Lorem</a></li>
+                </ul>
+            </div>
+
+            <div class="link">
+                <h3>Siguenos</h3>
+                <ul>
+                    <a href="https://www.tiktok.com/@agustino_mrt">
+                    <img src="{% static 'images/tistos.png' %}" alt="icon" width="32" height="32">
+                    </a>
+                    <a href="https://www.tiktok.com/@agustino_mrt">
+                        <img src="{% static 'images/instagram.png' %}" alt="icon" width="32" height="32">
+                    </a>
+
+                    <a href="https://www.youtube.com/@Agustinomrt">
+                        <img src="{% static 'images/yutu.png' %}" alt="icon" width="32" height="32">
+                    </a>
+                </ul>
+            </div>
+
+            <div class="link">
+                <h3>Suscribete</h3>
+                <ul>
+                    <li><a href="#">Lorem</a></li>
+                    <li><a href="#">Lorem</a></li>
+                    <li><a href="#">Lorem</a></li>
+                    <li><a href="#">Lorem</a></li>
+                </ul>
+            </div>
+
+            <div class="link">
+                <h3>Medios de Pago</h3>
+                <ul>
+                    <li><a href="#">Lorem</a></li>
+                    <li><a href="#">Lorem</a></li>
+                    <li><a href="#">Lorem</a></li>
+                    <li><a href="#">Lorem</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://sdk.mercadopago.com/js/v2"></script>
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>Checkout</h1>
+        <div class="mp-container"></div>
+    </div>
+    <script src="https://sdk.mercadopago.com/js/v2"></script>
+    <script>
+        const mp = new MercadoPago('TEST-82899ad9-aef0-4f0c-abdb-a12889445a22', {
+            locale: 'es-AR'
+        });
+        mp.checkout({
+            preference: {
+                id: '{{ preference_id }}'
+            },
+            render: {
+                container: '.mp-container', // Indica dónde se mostrará el botón de pago
+                label: 'Pagar', // Cambia el texto del botón de pago (opcional)
+            }
+        });
+    </script>
+</body>
+</html>
